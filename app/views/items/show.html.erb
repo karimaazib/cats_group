@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="ressource.css" />
+        <script src="https://kit.fontawesome.com/f2f9fc2fd7.js" crossorigin="anonymous"></script>
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+       <title><%= @item_searched.title%></title>
+        
+</head>
+
+<body>
+  <div class="container">
+    <div class = "row border">
+
+ 
+      <div class="col-md-8 p-0">
+        <img style="width:55%; height:500px; display: block; border-radius:5px" src= <%=  @item_searched.image_url %> alt="Event image">
+      </div>
+
+
+      <div class="col-md-4 p-5">
+        <div class="row">
+            <p>Un petit chat à adopter en photo ? </p
+            <br>
+        </div>
+        <div class="row">
+          <h3> <%= @item_searched.title%></h3>
+        </div>
+        <div class="row">
+         
+          
+        </div>
+
+        <div class="row align-self-end">
+              <h2 class="mt-5">A propos de cette photo</h2>
+            <p> <%= @item_searched.description %> </p>
+             
+              <p> <h4>PRIX : <%= @item_searched.price %> € </h4> </p>
+              <a href="#" class="btn btn-primary" >Ajouter dans le panier </a>
+        </div>
+        </div>
+      </div>
+  </div>
+  
+  <div class="container">
+    <div class = "row">
+        <div class="row col-md-8 p-0">
+        
+        </div>
+        
+    </div>
+  </div>
+      <div class="col-md-6 col-lg-7 text-center text-md-right">
+        <h5 class="mt-5">Partager cette photo</h5>
+        <!--Facebook-->
+        <a><i class="fab fa-facebook white-text mr-4"></i></a>  
+        <!--Twitter-->
+        <a><i class="fab fa-twitter white-text mr-4"></i></a>
+        <!--Linkedin-->
+        <a><i class="fab fa-linkedin white-text mr-4"></i></a>
+        <!--Instagram-->
+        <a><i class="fab fa-instagram white-text mr-lg-4"></i></a>          
+      </div>
+  
+</div>
+</body>
+</html>

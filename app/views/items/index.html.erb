@@ -1,0 +1,30 @@
+<center>
+<div class="jumbotron">
+    <h1 class="display-4">Petit Chat</h1> <br> 
+    <p class="lead">Toutes les occasions sont bonnes pour offrir un cadeau à un amoureux des chats</p> <br>
+    <hr class="my-4"> <br> <br>
+    <p class="lead">Choisis une photo </p> <br>
+
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="<%= items_path %>" role="button">Voir nos produits</a>
+    </p>
+  </div></center>
+
+  <div class="row text-center">
+<% @items.each do |item| %>
+<div class="col-lg-3 col-md-6 mb-4">
+  <div class="card shadow bg-white rounded ml-1">
+    <img class="card-img-top" src="<%= item.image_url %>" alt="">
+    <div class="card-body">
+      <h4 class="card-title"><%= item.title %></h4>
+      <p><%= item.price %>€</p>
+    </div>
+    <div class="card-footer">
+      <%= link_to "Acheter", item_path(item.id), class: "btn btn-primary" %>
+    </div>
+  </div>
+</div>
+<% end %>
+
+</div>
+
